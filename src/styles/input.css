@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Nunito+Sans:opsz@6..12&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Raleway:wght@100;400;500;600;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(90deg, rgba(48,63,159,1) 0%, rgba(0,0,0,1) 100%);;
+}
+
+.transition-ease-in-out {
+  transition: all 0.2s ease-in-out;
+}
+
+
+.shadow {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.splide {
+  padding: 20px 0;
+}
+
+/* Generic Slide */
+.splide__slide img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 400ms;
+  transform: scale(0.9);
+  transform-origin: center center;
+}
+
+/* Active Slide */
+.splide__slide.is-active img {
+  transform: scale(1);
+}
+
+/* Arrow Tweaks for Accessibility */
+.splide .splide__arrow {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  transform: none;
+  border-radius: unset;
+  width: 50px;
+  opacity: 0.9;
+}
+
+.splide .splide__arrow svg {
+  filter: invert(1);
+  width: 24px;
+  height: 24px;
+}
+
+.splide__arrow.splide__arrow--prev {
+  left: 0;
+  background:transparent;
+}
+
+.splide__arrow.splide__arrow--next {
+  right: 0;
+  background: transparent;
+}
+
+
