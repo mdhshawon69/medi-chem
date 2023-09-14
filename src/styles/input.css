@@ -25,12 +25,12 @@ body {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-.splide {
+/* .splide {
   padding: 20px 0;
-}
+} */
 
 /* Generic Slide */
-.splide__slide img {
+.product-item {
   display: block;
   width: 100%;
   border-radius: 8px;
@@ -40,7 +40,11 @@ body {
 }
 
 /* Active Slide */
-.splide__slide.is-active img {
+.product-item.is-active  {
+  transform: scale(1);
+}
+
+.product-item.is-active {
   transform: scale(1);
 }
 
@@ -56,9 +60,9 @@ body {
 }
 
 .splide .splide__arrow svg {
-  filter: invert(1);
   width: 24px;
   height: 24px;
+  fill: #fff;
 }
 
 .splide__arrow.splide__arrow--prev {
@@ -69,6 +73,7 @@ body {
 .splide__arrow.splide__arrow--next {
   right: 0;
   background: transparent;
+  
 }
 
 
