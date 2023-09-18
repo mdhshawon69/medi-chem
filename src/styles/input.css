@@ -18,6 +18,12 @@ body {
 background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(35,46,119,1) 100%);
 }
 
+.gradient-bg-header {
+  /* background: linear-gradient(90deg, rgba(48,63,159,1) 0%, rgba(0,0,0,1) 100%); */
+  /* background: rgb(0,0,0); */
+  background: linear-gradient(90deg, rgba(35,46,119,0.8) 0%, rgba(0,0,0,0.7) 100%);
+}
+
 @media screen and (max-width: 900px) {
   .gradient-bg-sm {
   /* background: linear-gradient(90deg, rgba(48,63,159,1) 0%, rgba(0,0,0,1) 100%); */
@@ -75,6 +81,12 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(35,46,119,1) 100%);
   fill: #fff;
 }
 
+#splide-client svg {
+  width: 24px;
+  height: 24px;
+  fill: rgba(35,46,119,1);
+}
+
 .splide__arrow.splide__arrow--prev {
   left: 0;
   background:transparent;
@@ -83,7 +95,6 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(35,46,119,1) 100%);
 .splide__arrow.splide__arrow--next {
   right: 0;
   background: transparent;
-  
 }
 
 

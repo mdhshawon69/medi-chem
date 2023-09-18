@@ -78,7 +78,7 @@
         id="header_splide"
         aria-label="Splide Basic HTML Example"
       >
-        <div class="splide__track lg:rounded-tr-[250px] rounded-tr-[150px]">
+        <div class="splide__track lg:rounded-bl-[200px]">
           <ul class="splide__list">
             <li class="splide__slide">
               <img
@@ -87,15 +87,22 @@
                 class="h-full w-full object-cover"
               />
               <div
-                class="absolute inset-0 bg-black/50 flex justify-center items-center"
+                class="absolute inset-0 gradient-bg-header flex flex-col justify-end items-start"
               >
-                <p
-                  class="lg:text-4xl md:text-3xl text-md text-white text-center md:w-4/5 w-[70%] shadow-md"
-                >
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequatur, numquam. A possimus magni recusandae nesciunt
-                  molestias aspernatur consectetur cumque in.
-                </p>
+                <div class="pl-[8%] pb-[5%]">
+                  <p
+                    class="lg:text-4xl md:text-3xl text-md text-white lg:w-3/5 md:w-4/5 w-[80%]"
+                  >
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequatur, numquam. A possimus magni recusandae nesciunt
+                    molestias aspernatur consectetur cumque in.
+                  </p>
+                  <button
+                    class="md:py-3 md:px-5 py-2 px-3 text-white bg-[#303f9f] rounded-md hover:bg-white hover:text-[#303f9f] border-2 border-[#303f9f] transition-ease-in-out mt-5"
+                  >
+                    Contact Us
+                  </button>
+                </div>
               </div>
             </li>
             <li class="splide__slide">
@@ -129,9 +136,9 @@
 
       <!-- Intro Section Starts -->
 
-      <section class="gradient-bg text-white">
-        <div class="w-11/12 text-center mx-auto lg:py-20 py-10">
-          <h1 class="lg:text-[48px] text-2xl font-bold">
+      <section class="lg:pt-16">
+        <div class="w-11/12 text-center mx-auto py-10">
+          <h1 class="lg:text-[48px] text-2xl font-bold text-[#303f9f]">
             WELCOME TO MEDI-CHEM INTERNATIONAL
           </h1>
           <p
@@ -153,64 +160,66 @@
               class="mt-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-[80%] mx-auto"
             >
               <div
-                class="text-center flex flex-col justify-start items-center space-y-3 bg-white py-5 px-5 text-gray-800 font-bold lg:rounded-tl-[100px] rounded-tl-[60px]"
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold lg:rounded-tl-[100px] rounded-tl-[60px]"
               >
                 <span
-                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-[#303f9f]"
-                  ><i class="fa-solid fa-industry text-3xl text-[#fff]"></i
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-industry text-3xl text-[#303f9f]"></i
                 ></span>
-                <h3>Industrial Chemicals</h3>
+                <h3 class="text-white">Industrial Chemicals</h3>
               </div>
               <div
-                class="text-center flex flex-col justify-start items-center space-y-3 bg-white py-5 px-5 text-gray-800 font-bold"
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold"
               >
                 <span
-                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-[#303f9f]"
-                  ><i class="fa-solid fa-capsules text-3xl text-[#fff]"></i
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-capsules text-3xl text-[#303f9f]"></i
                 ></span>
-                <h3>
+                <h3 class="text-white">
                   Pharmaceutical Raw Materials – API, Intermediates, Excipients,
                   Fine Chemicals, Minerals ets.
                 </h3>
               </div>
               <div
-                class="text-center flex flex-col justify-start items-center space-y-3 bg-white py-5 px-5 text-gray-800 font-bold"
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold"
               >
                 <span
-                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-[#303f9f]"
-                  ><i class="fa-solid fa-shield-dog text-3xl text-[#fff]"></i
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-shield-dog text-3xl text-[#303f9f]"></i
                 ></span>
-                <h3>Veterinary Products</h3>
+                <h3 class="text-white">Veterinary Products</h3>
               </div>
               <div
-                class="text-center flex flex-col justify-start items-center space-y-3 bg-white py-5 px-5 text-gray-800 font-bold"
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold"
               >
                 <span
-                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-[#303f9f]"
-                  ><i class="fa-solid fa-eye-dropper text-3xl text-[#fff]"></i
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i
+                    class="fa-solid fa-eye-dropper text-3xl text-[#303f9f]"
+                  ></i
                 ></span>
-                <h3>
+                <h3 class="text-white">
                   Food Additives – Chemicals, Dehydrated Slices and Powders,
                   Spices etc.
                 </h3>
               </div>
               <div
-                class="text-center flex flex-col justify-start items-center space-y-3 bg-white py-5 px-5 text-gray-800 font-bold"
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold"
               >
                 <span
-                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-[#303f9f]"
-                  ><i class="fa-solid fa-tractor text-3xl text-[#fff]"></i
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-tractor text-3xl text-[#303f9f]"></i
                 ></span>
-                <h3>Agrochemicals and Fertilizers</h3>
+                <h3 class="text-white">Agrochemicals and Fertilizers</h3>
               </div>
               <div
-                class="text-center flex flex-col justify-start items-center space-y-3 bg-white py-5 px-5 text-gray-800 font-bold lg:rounded-br-[100px] rounded-br-[60px]"
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold lg:rounded-br-[100px] rounded-br-[60px]"
               >
                 <span
-                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-[#303f9f]"
-                  ><i class="fa-solid fa-tag text-3xl text-[#fff]"></i
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-tag text-3xl text-[#303f9f]"></i
                 ></span>
-                <h3>
+                <h3 class="text-white">
                   Shrink Label, Laminated Foils, Printed Labels, PVC Capseal
                   etc.
                 </h3>
@@ -324,15 +333,126 @@
       </section>
       <!-- Products Section Ends -->
 
+      <section class="lg:py-16 py-5">
+        <h2 class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold">
+          OUR SUPPLIERS
+        </h2>
+
+        <div class="py-5 w-11/12 mx-auto">
+          <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-5">
+            <div class="flex justify-center items-center">
+              <img
+                class="w-72 h-full object-contain"
+                src="/public/assets/supplier-1.png"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                class="w-72 h-full object-contain"
+                src="/public/assets/supplier-2.png"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                class="w-72 h-full object-contain"
+                src="/public/assets/supplier-3.png"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                class="w-72 h-full object-contain"
+                src="/public/assets/supplier-4.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="py-8 text-center">
+          <button
+            class="py-3 px-5 text-white bg-[#303f9f] rounded-md hover:bg-white hover:text-[#303f9f] border-2 border-[#303f9f] transition-ease-in-out"
+          >
+            View All Suppliers
+          </button>
+        </div>
+      </section>
+
+      <!-- Clients Section Starts -->
+      <section class="lg:py-16 py-5">
+        <h2 class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold">
+          OUR CUSTOMERS
+        </h2>
+
+        <div class="lg:py-20 py-5 w-11/12 mx-auto">
+          <section
+            id="splide-client"
+            class="splide"
+            aria-label="Beautiful Images"
+          >
+            <div class="splide__track px-10">
+              <ul class="splide__list grid grid-cols-4">
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-1.jpg"
+                    alt=""
+                  />
+                </li>
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-2.jpg"
+                    alt=""
+                  />
+                </li>
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-3.jpg"
+                    alt=""
+                  />
+                </li>
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-4.jpg"
+                    alt=""
+                  />
+                </li>
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-5.jpg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <div class="py-8 text-center">
+          <button
+            class="py-3 px-5 text-white bg-[#303f9f] rounded-md hover:bg-white hover:text-[#303f9f] border-2 border-[#303f9f] transition-ease-in-out"
+          >
+            View All Customers
+          </button>
+        </div>
+      </section>
+      <!-- Clients Section Ends -->
+
       <section
-        class="gradient-bg py-20 lg:rounded-bl-[250px] rounded-bl-[150px]"
+        class="gradient-bg py-20 lg:rounded-tr-[250px] rounded-tr-[150px]"
       >
         <footer class="w-11/12 mx-auto">
           <div
-            class="flex lg:flex-row flex-col md:items-start items-end gap-5 justify-between"
+            class="flex lg:flex-row flex-col md:items-start gap-5 justify-between"
           >
             <div
-              class="h-24 w-fit bg-white rounded-md shadow-2xl lg:mb-0 mb-16"
+              class="h-24 w-fit rounded-md lg:bg-transparent bg-white shadow-2xl lg:mb-0 mb-16"
             >
               <img
                 class="h-20 w-auto"
@@ -345,9 +465,7 @@
                 </p>
               </div>
             </div>
-            <div
-              class="grid md:grid-cols-2 grid-cols-1 gap-y-5 md:text-left text-right"
-            >
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-y-5">
               <div class="text-white lg:space-y-3 space-y-1">
                 <h4 class="font-bold text-lg">
                   <i class="fa-solid fa-location-dot"></i> Head Office:
@@ -376,9 +494,7 @@
                   info@medi-cheminternational.com
                 </h4>
               </div>
-              <div
-                class="flex md:justify-start gap-5 md:items-center justify-end"
-              >
+              <div class="flex md:justify-start gap-5 md:items-center">
                 <a href="#">
                   <h4 class="font-bold text-2xl text-white">
                     <i class="fa-brands fa-facebook"></i>
@@ -407,6 +523,7 @@
         autoplay: true,
         interval: "3000",
         perPage: 1,
+        arrows: false,
         fixedHeight: "calc(100vh - 80px)",
         breakpoints: {
           900: {
@@ -436,6 +553,22 @@
           },
         }).mount();
       });
+    </script>
+    <script>
+      new Splide("#splide-client", {
+        rewind: true,
+        rewindSpeed: 1000,
+        perPage: 4,
+        breakpoints: {
+          900: {
+            perPage: 2,
+          },
+
+          600: {
+            perPage: 1,
+          },
+        },
+      }).mount();
     </script>
   </body>
 </html>
