@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medi-Chem</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.0/cdn.js"
+      integrity="sha512-kABigH+locGcvvX9sgOGm0JP4iDKUQzti7/HfbX+3ECCP2pmb13F6/ImQtVpSvrnNQHewqNMojAykCIw7z04LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/grid.css" />
+  </head>
+  <body>
+    <section class="max-w-[1920px]">
+      <!--NavBar-->
+      <nav
+        class="flex justify-between items-center lg:h-20 w-11/12 mx-auto"
+        x-data="{open: false}"
+      >
+        <a href="#">
+          <img
+            class="w-auto h-16 object-contain"
+            src="../../public/assets/logo3.png"
+            alt="Logo"
+          />
+        </a>
+        <button class="text-2xl lg:invisible visible" x-on:click="open = !open">
+          <span x-bind:class="open ? 'hidden' : 'block'"
+            ><i class="fa-solid fa-bars"></i
+          ></span>
+
+          <span x-bind:class="!open ? 'hidden' : 'block'"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+        </button>
+        <ul
+          x-bind:class="open ? 'left-0' : '-left-full'"
+          class="flex lg:flex-row flex-col lg:justify-between justify-start items-center gap-5 font-bold lg:static absolute top-16 -left-full w-full lg:w-fit lg:bg-white bg-[#fff]-sm h-screen lg:h-fit pt-10 lg:pt-0 text-white lg:text-[#222] transition-ease-in-out z-[9999]"
+        >
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Home</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">About Us</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Customers</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Suppliers</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Products</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <!--Carousel Starts-->
+      <section
+        class="splide rounded-tr-full"
+        id="header_splide"
+        aria-label="Splide Basic HTML Example"
+      >
+        <div class="splide__track lg:rounded-bl-[200px]">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img
+                src="../../public/assets/image_upload__1464975319_1464975319.jpg"
+                alt=""
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 gradient-bg-header flex flex-col justify-end items-start"
+              >
+                <div class="pl-[8%] pb-[5%]">
+                  <p
+                    class="lg:text-7xl font-bold md:text-3xl text-md text-white w-full"
+                  >
+                    CUSTOMERS
+                  </p>
+                  <button
+                    class="md:py-3 md:px-5 py-2 px-3 text-white bg-[#303f9f] rounded-md hover:bg-white hover:text-[#303f9f] border-2 border-[#303f9f] transition-ease-in-out mt-5"
+                  >
+                    Contact Us
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Carousel Ends-->
+
+      <section class="lg:py-16 py-6 overflow-hidden">
+        <h2
+          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold text-[#303F9F]"
+        >
+          OUR CUSTOMERS
+        </h2>
+
+        <div class="grid lg:grid-cols-5 grid-cols-1 md:grid-cols-2 gap-3 px-10">
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-1.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 lg:col-span-2 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-2.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-3.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-4.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 lg:col-span-2 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-5.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-6.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-7.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-8.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-9.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 lg:col-span-2 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-10.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-11.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-12.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 lg:col-span-2 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-13.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-14.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-15.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-16.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-17.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 lg:col-span-2 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-18.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-19.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-20.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 lg:col-span-2 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-21.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-22.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="h-64 shadow-md rounded-md flex justify-center items-center p-5 bg-[#fff]"
+          >
+            <img
+              class="w-36 h-36 object-contain"
+              src="../../public/assets/customer-23.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="gradient-bg py-20 lg:rounded-tr-[250px] rounded-tr-[150px]"
+      >
+        <footer class="w-11/12 mx-auto">
+          <div
+            class="flex lg:flex-row flex-col md:items-start gap-5 justify-between"
+          >
+            <div
+              class="h-24 w-fit rounded-md lg:bg-transparent bg-white shadow-2xl lg:mb-0 mb-16"
+            >
+              <img
+                class="h-20 w-auto"
+                src="../../public/assets/footer.png"
+                alt=""
+              />
+              <div class="text-center">
+                <p class="text-white pt-10">
+                  Medi-Chem International &copy; 2023
+                </p>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-y-5">
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-location-dot"></i> Head Office:
+                </h4>
+                <p class="leading-7 text-sm lg:text-md">
+                  Raj Rodela, 2nd Floor, 244/1, Ahmed Nagar,<br />
+                  (Near Bashiruddin School & College), Mirpur-1,<br />
+                  Dhaka -1216, Bangladesh. Tel: +88-02-58051550.
+                </p>
+              </div>
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-globe"></i> Overseas Liasion Office:
+                </h4>
+                <p class="leading-7 text-sm lg:text-md">
+                  Jay Enterprises, E-14, Nisarg Heaven, Near Pizza Hut,<br />
+                  Mahavir Nagar, Kandivili (W), Mumbai 400 067, India. <br />
+                  Tel: +91-22-6528 4052, Cell: +91-9820317144, +91-9324185294
+                  <br />
+                  Email: info@sourcechempharm.com
+                </p>
+              </div>
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-envelope"></i>
+                  info@medi-cheminternational.com
+                </h4>
+              </div>
+              <div class="flex md:justify-start gap-5 md:items-center">
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-facebook"></i>
+                  </h4>
+                </a>
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </h4>
+                </a>
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </section>
+
+    <script>
+      new Splide("#header_splide", {
+        type: "loop",
+        autoplay: true,
+        interval: "3000",
+        perPage: 1,
+        arrows: false,
+        fixedHeight: "calc(100vh - 80px)",
+        navigator: false,
+        pagination: false,
+        breakpoints: {
+          900: {
+            fixedHeight: false,
+          },
+        },
+      }).mount();
+    </script>
+  </body>
+</html>
