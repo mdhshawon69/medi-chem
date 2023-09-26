@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medi-Chem</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.0/cdn.js"
+      integrity="sha512-kABigH+locGcvvX9sgOGm0JP4iDKUQzti7/HfbX+3ECCP2pmb13F6/ImQtVpSvrnNQHewqNMojAykCIw7z04LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="max-w-[1920px]">
+      <!--NavBar-->
+      <nav
+        class="flex justify-between items-center lg:h-20 w-11/12 mx-auto"
+        x-data="{open: false}"
+      >
+        <a href="#">
+          <img
+            class="w-auto h-16 object-contain"
+            src="../../public/assets/logo3.png"
+            alt="Logo"
+          />
+        </a>
+        <button class="text-2xl lg:invisible visible" x-on:click="open = !open">
+          <span x-bind:class="open ? 'hidden' : 'block'"
+            ><i class="fa-solid fa-bars"></i
+          ></span>
+
+          <span x-bind:class="!open ? 'hidden' : 'block'"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+        </button>
+        <ul
+          x-bind:class="open ? 'left-0' : '-left-full'"
+          class="flex lg:flex-row flex-col lg:justify-between justify-start items-center gap-5 font-bold lg:static absolute top-16 -left-full w-full lg:w-fit lg:bg-white gradient-bg-sm h-screen lg:h-fit pt-10 lg:pt-0 text-white lg:text-[#222] transition-ease-in-out z-[9999]"
+        >
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Home</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">About Us</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Customers</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Suppliers</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Products</a>
+          </li>
+          <li class="hover:text-[#303f9f] transition-all">
+            <a class="active:text-[#303f9f]" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <!--Carousel Starts-->
+      <section
+        class="splide rounded-tr-full"
+        id="header_splide"
+        aria-label="Splide Basic HTML Example"
+      >
+        <div class="splide__track lg:rounded-bl-[200px]">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img
+                src="../../public/assets/image_upload__1464975319_1464975319.jpg"
+                alt=""
+                class="h-full w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 gradient-bg-header flex flex-col justify-end items-start"
+              >
+                <div class="pl-[8%] pb-[5%]">
+                  <p
+                    class="lg:text-7xl font-bold md:text-3xl text-md text-white w-full"
+                  >
+                    LETS GET STARTED
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Carousel Ends-->
+
+      <section
+        class="lg:pt-16 py-6 lg:px-10 px-3 overflow-hidden bg-[url('../../public/assets/contact_us_background.png')] bg-cover bg-no-repeat bg-center"
+      >
+        <h2
+          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold text-[#303F9F]"
+        >
+          CONTACT US
+        </h2>
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+          <iframe
+            class="h-64 lg:h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.6923086820407!2d90.35567960870668!3d23.79396877855158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1180ba9a209%3A0xa9d31d42f52761bc!2sMedi-Chem%20International!5e0!3m2!1sen!2sbd!4v1695740819137!5m2!1sen!2sbd"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <form action="">
+            <div class="flex flex-col gap-5">
+              <label for="">
+                <span
+                  >Name Surname / Company<span class="text-red-600"
+                    >*</span
+                  ></span
+                >
+                <input
+                  type="text"
+                  class="w-full border-[1.5px] border-[#303F9F] py-2 px-2 rounded-md mt-1 placeholder:text-sm"
+                  placeholder="Enter Your Name Surname / Company"
+                />
+              </label>
+              <label for="">
+                <span>Email<span class="text-red-600">*</span></span>
+                <input
+                  type="email"
+                  class="w-full border-[1.5px] border-[#303F9F] py-2 px-2 rounded-md mt-1 placeholder:text-sm"
+                  placeholder="Enter Your Email"
+                />
+              </label>
+              <label for="">
+                <span>Subject<span class="text-red-600">*</span></span>
+                <input
+                  type="text"
+                  class="w-full border-[1.5px] border-[#303F9F] py-2 px-2 rounded-md mt-1 placeholder:text-sm"
+                  placeholder="Enter Your Subject"
+                />
+              </label>
+              <label for="">
+                <span
+                  >Phone / Mobile Number<span class="text-red-600"
+                    >*</span
+                  ></span
+                >
+                <input
+                  type="text"
+                  class="w-full border-[1.5px] border-[#303F9F] py-2 px-2 rounded-md mt-1 placeholder:text-sm"
+                  placeholder="Enter Your Phone / Mobile Number"
+                />
+              </label>
+              <label for="">
+                <span>Message<span class="text-red-600">*</span></span>
+                <textarea
+                  rows="6"
+                  type="text"
+                  class="w-full border-[1.5px] border-[#303F9F] py-2 px-2 rounded-md mt-1 placeholder:text-sm"
+                  placeholder="Enter Your Message"
+                ></textarea>
+              </label>
+
+              <button
+                class="py-2 rounded-md px-12 border-2 border-transparent bg-[#303F9F] w-fit text-white hover:border-2 hover:border-[#303F9F] hover:bg-transparent hover:text-[#303F9F] transition-colors"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      AOS.init();
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("accordion", () => ({
+          open: false,
+        }));
+      });
+    </script>
+    <script>
+      new Splide("#header_splide", {
+        type: "loop",
+        autoplay: true,
+        interval: "3000",
+        perPage: 1,
+        arrows: false,
+        fixedHeight: "calc(100vh - 80px)",
+        navigator: false,
+        pagination: false,
+        breakpoints: {
+          900: {
+            fixedHeight: false,
+          },
+        },
+      }).mount();
+    </script>
+  </body>
+</html>
