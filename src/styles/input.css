@@ -108,3 +108,31 @@ body {
   right: 0;
   background: transparent;
 }
+
+.header {
+  background: linear-gradient(
+      180deg,
+      hsla(232, 54%, 41%, 0.7) 0%,
+      hsla(12, 71%, 3%, 0.7) 100%
+    ),
+    url("../../public/assets/banner.jpg");
+
+  background: -moz-linear-gradient(
+      180deg,
+      hsla(232, 54%, 41%, 0.7) 0%,
+      hsla(12, 71%, 3%, 0.7) 100%
+    ),
+    url("../../public/assets/banner.jpg");
+
+  background: -webkit-linear-gradient(
+      180deg,
+      hsla(232, 54%, 41%, 0.7) 0%,
+      hsla(12, 71%, 3%, 0.7) 100%
+    ),
+    url("../../public/assets/banner.jpg");
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#303F9F", endColorstr="#0C0402", GradientType=1 );
+  height: 100vh;
+  background-position: bottom;
+  background-size: cover;
+}

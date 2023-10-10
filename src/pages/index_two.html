@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medi-Chem</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.0/cdn.js"
+      integrity="sha512-kABigH+locGcvvX9sgOGm0JP4iDKUQzti7/HfbX+3ECCP2pmb13F6/ImQtVpSvrnNQHewqNMojAykCIw7z04LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="max-w-[1920px]">
+      <!--NavBar-->
+
+      <!--Carousel Starts-->
+      <section class="header">
+        <nav
+          class="flex justify-between items-center lg:h-20 w-11/12 mx-auto"
+          x-data="{open: false}"
+        >
+          <a href="#" class="bg-white pb-1 rounded-md">
+            <img
+              class="w-auto h-16 object-contain"
+              src="../../public/assets/logo3.png"
+              alt="Logo"
+            />
+          </a>
+          <button
+            class="text-2xl lg:invisible visible"
+            x-on:click="open = !open"
+          >
+            <span x-bind:class="open ? 'hidden' : 'block'"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+
+            <span x-bind:class="!open ? 'hidden' : 'block'"
+              ><i class="fa-solid fa-xmark"></i
+            ></span>
+          </button>
+          <ul
+            x-bind:class="open ? 'left-0' : '-left-full'"
+            class="flex lg:flex-row flex-col lg:justify-between justify-start items-center gap-5 font-bold lg:static absolute top-16 -left-full w-full lg:w-fit lg:bg-transparent gradient-bg-sm h-screen lg:h-fit pt-10 lg:pt-0 text-white lg:text-[#fff] transition-ease-in-out z-[9999]"
+          >
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Home</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">About Us</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Customers</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Suppliers</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Products</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex justify-center items-center h-full">
+          <h1 class="text-4xl font-bold text-white">
+            Awesome services from industrial company
+          </h1>
+        </div>
+      </section>
+      <!--Carousel Ends-->
+
+      <!-- Intro Section Starts -->
+
+      <section class="lg:pt-16">
+        <div class="w-11/12 text-center mx-auto py-10">
+          <h1 class="lg:text-[48px] text-2xl font-bold text-[#303f9f]">
+            WELCOME TO MEDI-CHEM INTERNATIONAL
+          </h1>
+          <p
+            class="lg:text-xl mx-auto text-center text-lg lg:w-3/4 lg:mt-8 mt-5"
+          >
+            <strong>Medi-Chem International</strong> - is one of the largest
+            indenting house in Bangladesh specialized in International sourcing
+            of Chemicals and Pharmaceutical Raw Materials for our customers in
+            Home and Great business achievement for our suppliers in Abroad. We
+            have the best Slogans as
+            <strong>"Symbol of Quality Product & Service"</strong>
+          </p>
+
+          <div class="mt-20">
+            <h3 class="lg:text-3xl text-lg font-bold mb-10">
+              We Deals the following for our valued customers:
+            </h3>
+            <div
+              class="mt-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-[80%] mx-auto"
+            >
+              <div
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold lg:rounded-tl-[100px] rounded-tl-[60px]"
+              >
+                <span
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-industry text-3xl text-[#303f9f]"></i
+                ></span>
+                <h3 class="text-white">Industrial Chemicals</h3>
+              </div>
+              <div
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold"
+              >
+                <span
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-capsules text-3xl text-[#303f9f]"></i
+                ></span>
+                <h3 class="text-white">
+                  Pharmaceutical Raw Materials – API, Intermediates, Excipients,
+                  Fine Chemicals, Minerals ets.
+                </h3>
+              </div>
+              <div
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold"
+              >
+                <span
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-shield-dog text-3xl text-[#303f9f]"></i
+                ></span>
+                <h3 class="text-white">Veterinary Products</h3>
+              </div>
+              <div
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold"
+              >
+                <span
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i
+                    class="fa-solid fa-eye-dropper text-3xl text-[#303f9f]"
+                  ></i
+                ></span>
+                <h3 class="text-white">
+                  Food Additives – Chemicals, Dehydrated Slices and Powders,
+                  Spices etc.
+                </h3>
+              </div>
+              <div
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold"
+              >
+                <span
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-tractor text-3xl text-[#303f9f]"></i
+                ></span>
+                <h3 class="text-white">Agrochemicals and Fertilizers</h3>
+              </div>
+              <div
+                class="text-center flex flex-col justify-start items-center space-y-3 bg-[#303f9f] py-5 px-5 text-gray-800 font-bold lg:rounded-br-[100px] rounded-br-[60px]"
+              >
+                <span
+                  class="border border-white w-20 h-20 flex justify-center items-center rounded-full bg-white"
+                  ><i class="fa-solid fa-tag text-3xl text-[#303f9f]"></i
+                ></span>
+                <h3 class="text-white">
+                  Shrink Label, Laminated Foils, Printed Labels, PVC Capseal
+                  etc.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Intro Section Ends -->
+
+      <!-- Products Section Starts -->
+      <section class="lg:py-16 py-5">
+        <h2 class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold">
+          OUR PRODUCTS
+        </h2>
+
+        <div id="splide" class="splide lg:py-20 py-5">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li
+                class="splide__slide flex flex-col justify-between items-center overflow-hidden product-item lg:h-96 md:h-72 h-52 bg-white border border-blue-500 shadow"
+              >
+                <div class="relative h-3/4 overflow-hidden">
+                  <img
+                    src="../../public/assets/product.jpg"
+                    class="h-full w-full rounded-lg object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 flex justify-center items-center rounded-lg"
+                  ></div>
+                </div>
+                <div class="h-1/4 flex justify-center items-center">
+                  <h4
+                    class="lg:text-2xl md:text-xl text-sm px-2 text-center font-bold text-[#303f9f]"
+                  >
+                    Solution For Osteoporosis
+                  </h4>
+                </div>
+              </li>
+              <li
+                class="splide__slide flex flex-col justify-between items-center overflow-hidden product-item lg:h-96 md:h-72 h-52 bg-white border border-blue-500 shadow"
+              >
+                <div class="relative h-3/4 overflow-hidden">
+                  <img
+                    src="../../public/assets/product-2.jpg"
+                    class="h-full w-full rounded-lg object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 flex justify-center items-center rounded-lg"
+                  ></div>
+                </div>
+                <div class="h-1/4 flex justify-center items-center">
+                  <h4
+                    class="lg:text-2xl md:text-xl text-sm px-2 text-center font-bold text-[#303f9f]"
+                  >
+                    Solution For Osteoporosis
+                  </h4>
+                </div>
+              </li>
+              <li
+                class="splide__slide flex flex-col justify-between items-center overflow-hidden product-item lg:h-96 md:h-72 h-52 bg-white border border-blue-500 shadow"
+              >
+                <div class="relative h-3/4 overflow-hidden">
+                  <img
+                    src="../../public/assets/product-3.jpg"
+                    class="h-full w-full rounded-lg object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 flex justify-center items-center rounded-lg"
+                  ></div>
+                </div>
+                <div class="h-1/4 flex justify-center items-center">
+                  <h4
+                    class="lg:text-2xl md:text-xl text-sm px-2 text-center font-bold text-[#303f9f]"
+                  >
+                    Solution For Osteoporosis
+                  </h4>
+                </div>
+              </li>
+              <li
+                class="splide__slide flex flex-col justify-between items-center overflow-hidden product-item lg:h-96 md:h-72 h-52 bg-white border border-blue-500 shadow"
+              >
+                <div class="relative h-3/4 overflow-hidden">
+                  <img
+                    src="../../public/assets/product-4.png"
+                    class="h-full w-full rounded-lg object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/30 flex justify-center items-center rounded-lg"
+                  ></div>
+                </div>
+                <div class="h-1/4 flex justify-center items-center">
+                  <h4
+                    class="lg:text-2xl md:text-xl text-sm px-2 text-center font-bold text-[#303f9f]"
+                  >
+                    Solution For Osteoporosis
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="py-8 text-center">
+          <button
+            class="py-3 px-5 text-white bg-[#303f9f] rounded-md hover:bg-white hover:text-[#303f9f] border-2 border-[#303f9f] transition-ease-in-out"
+          >
+            View All Products
+          </button>
+        </div>
+      </section>
+      <!-- Products Section Ends -->
+
+      <section class="lg:py-16 py-5">
+        <h2 class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold">
+          OUR SUPPLIERS
+        </h2>
+
+        <div class="py-5 w-11/12 mx-auto">
+          <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-5">
+            <div class="flex justify-center items-center">
+              <img
+                class="w-72 h-full object-contain"
+                src="/public/assets/supplier-1.png"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                class="w-72 h-full object-contain"
+                src="/public/assets/supplier-2.png"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                class="w-72 h-full object-contain"
+                src="/public/assets/supplier-3.png"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                class="w-72 h-full object-contain"
+                src="/public/assets/supplier-4.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="py-8 text-center">
+          <button
+            class="py-3 px-5 text-white bg-[#303f9f] rounded-md hover:bg-white hover:text-[#303f9f] border-2 border-[#303f9f] transition-ease-in-out"
+          >
+            View All Suppliers
+          </button>
+        </div>
+      </section>
+
+      <!-- Clients Section Starts -->
+      <section class="lg:py-16 py-5">
+        <h2 class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold">
+          OUR CUSTOMERS
+        </h2>
+
+        <div class="lg:py-20 py-5 w-11/12 mx-auto">
+          <section
+            id="splide-client"
+            class="splide"
+            aria-label="Beautiful Images"
+          >
+            <div class="splide__track px-10">
+              <ul class="splide__list grid grid-cols-4">
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-1.jpg"
+                    alt=""
+                  />
+                </li>
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-2.jpg"
+                    alt=""
+                  />
+                </li>
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-3.jpg"
+                    alt=""
+                  />
+                </li>
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-4.jpg"
+                    alt=""
+                  />
+                </li>
+                <li class="splide__slide flex justify-center items-center">
+                  <img
+                    class="w-60 h-auto object-contain"
+                    src="/public/assets/customer-5.jpg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <div class="py-8 text-center">
+          <button
+            class="py-3 px-5 text-white bg-[#303f9f] rounded-md hover:bg-white hover:text-[#303f9f] border-2 border-[#303f9f] transition-ease-in-out"
+          >
+            View All Customers
+          </button>
+        </div>
+      </section>
+      <!-- Clients Section Ends -->
+
+      <section
+        class="gradient-bg py-20 lg:rounded-tr-[250px] rounded-tr-[150px]"
+      >
+        <footer class="w-11/12 mx-auto">
+          <div
+            class="flex lg:flex-row flex-col md:items-start gap-5 justify-between"
+          >
+            <div
+              class="h-24 w-fit rounded-md lg:bg-transparent bg-white shadow-2xl lg:mb-0 mb-16"
+            >
+              <img
+                class="h-20 w-auto"
+                src="../../public/assets/footer.png"
+                alt=""
+              />
+              <div class="text-center">
+                <p class="text-white pt-10">
+                  Medi-Chem International &copy; 2023
+                </p>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-y-5">
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-location-dot"></i> Head Office:
+                </h4>
+                <p class="leading-7 text-sm lg:text-md">
+                  Raj Rodela, 2nd Floor, 244/1, Ahmed Nagar,<br />
+                  (Near Bashiruddin School & College), Mirpur-1,<br />
+                  Dhaka -1216, Bangladesh. Tel: +88-02-58051550.
+                </p>
+              </div>
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-globe"></i> Overseas Liasion Office:
+                </h4>
+                <p class="leading-7 text-sm lg:text-md">
+                  Jay Enterprises, E-14, Nisarg Heaven, Near Pizza Hut,<br />
+                  Mahavir Nagar, Kandivili (W), Mumbai 400 067, India. <br />
+                  Tel: +91-22-6528 4052, Cell: +91-9820317144, +91-9324185294
+                  <br />
+                  Email: info@sourcechempharm.com
+                </p>
+              </div>
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-envelope"></i>
+                  info@medi-cheminternational.com
+                </h4>
+              </div>
+              <div class="flex md:justify-start gap-5 md:items-center">
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-facebook"></i>
+                  </h4>
+                </a>
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </h4>
+                </a>
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </section>
+
+    <script>
+      new Splide("#header_splide", {
+        type: "loop",
+        autoplay: true,
+        interval: "3000",
+        perPage: 1,
+        arrows: false,
+        fixedHeight: "calc(100vh - 80px)",
+        breakpoints: {
+          900: {
+            fixedHeight: false,
+          },
+        },
+      }).mount();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#splide", {
+          type: "loop",
+          perPage: 3,
+          focus: "center",
+          autoplay: true,
+          interval: 8000,
+          flickMaxPages: 3,
+          updateOnMove: true,
+          pagination: false,
+          padding: "10%",
+          throttle: 300,
+          breakpoints: {
+            1440: {
+              perPage: 1,
+              padding: "30%",
+            },
+          },
+        }).mount();
+      });
+    </script>
+    <script>
+      new Splide("#splide-client", {
+        rewind: true,
+        rewindSpeed: 1000,
+        perPage: 4,
+        breakpoints: {
+          900: {
+            perPage: 2,
+          },
+
+          600: {
+            perPage: 1,
+          },
+        },
+      }).mount();
+    </script>
+  </body>
+</html>

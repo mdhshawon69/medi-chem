@@ -980,22 +980,6 @@ video {
   padding: 1.5rem;
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
-.p-2{
-  padding: 0.5rem;
-}
-
-.p-2\.5{
-  padding: 0.625rem;
-}
-
-.p-1{
-  padding: 0.25rem;
-}
-
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1073,18 +1057,6 @@ video {
   padding-top: 2.5rem;
 }
 
-.pb-1{
-  padding-bottom: 0.25rem;
-}
-
-.pb-2{
-  padding-bottom: 0.5rem;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
-}
-
 .text-left{
   text-align: left;
 }
@@ -1111,11 +1083,6 @@ video {
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-bold{
@@ -1331,22 +1298,7 @@ body {
 }
 
 .header {
-  background: linear-gradient(
-      180deg,
-      hsla(232, 54%, 41%, 0.7) 0%,
-      hsla(12, 71%, 3%, 0.7) 100%
-    ),
-    url("../../public/assets/banner.jpg");
-  background: -webkit-linear-gradient(
-      180deg,
-      hsla(232, 54%, 41%, 0.7) 0%,
-      hsla(12, 71%, 3%, 0.7) 100%
-    ),
-    url("../../public/assets/banner.jpg");
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#303F9F", endColorstr="#0C0402", GradientType=1 );
-  height: 100vh;
-  background-position: bottom;
-  background-size: cover;
+  background-image: url("../../public/assets/banner.jpg");
 }
 
 .placeholder\:text-sm::-moz-placeholder{
@@ -1630,11 +1582,6 @@ body {
   .lg\:text-\[\#222\]{
     --tw-text-opacity: 1;
     color: rgb(34 34 34 / var(--tw-text-opacity));
-  }
-
-  .lg\:text-\[\#fff\]{
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
