@@ -29,89 +29,82 @@
   <body>
     <section class="max-w-[1920px]">
       <!--NavBar-->
-      <nav
-        class="flex justify-between items-center lg:h-20 w-11/12 mx-auto"
-        x-data="{open: false}"
-      >
-        <a href="#">
-          <img
-            class="w-auto h-16 object-contain"
-            src="../../public/assets/logo3.png"
-            alt="Logo"
-          />
-        </a>
-        <button class="text-2xl lg:invisible visible" x-on:click="open = !open">
-          <span x-bind:class="open ? 'hidden' : 'block'"
-            ><i class="fa-solid fa-bars"></i
-          ></span>
-
-          <span x-bind:class="!open ? 'hidden' : 'block'"
-            ><i class="fa-solid fa-xmark"></i
-          ></span>
-        </button>
-        <ul
-          x-bind:class="open ? 'left-0' : '-left-full'"
-          class="flex lg:flex-row flex-col lg:justify-between justify-start items-center gap-5 font-bold lg:static absolute top-16 -left-full w-full lg:w-fit lg:bg-white gradient-bg-sm h-screen lg:h-fit pt-10 lg:pt-0 text-white lg:text-[#222] transition-ease-in-out z-[9999]"
-        >
-          <li class="hover:text-[#303f9f] transition-all">
-            <a class="active:text-[#303f9f]" href="#">Home</a>
-          </li>
-          <li class="hover:text-[#303f9f] transition-all">
-            <a class="active:text-[#303f9f]" href="#">About Us</a>
-          </li>
-          <li class="hover:text-[#303f9f] transition-all">
-            <a class="active:text-[#303f9f]" href="#">Customers</a>
-          </li>
-          <li class="hover:text-[#303f9f] transition-all">
-            <a class="active:text-[#303f9f]" href="#">Suppliers</a>
-          </li>
-          <li class="hover:text-[#303f9f] transition-all">
-            <a class="active:text-[#303f9f]" href="#">Products</a>
-          </li>
-          <li class="hover:text-[#303f9f] transition-all">
-            <a class="active:text-[#303f9f]" href="#">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
       <!--Carousel Starts-->
-      <section
-        class="splide rounded-tr-full"
-        id="header_splide"
-        aria-label="Splide Basic HTML Example"
-      >
-        <div class="splide__track lg:rounded-bl-[200px]">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <img
-                src="../../public/assets/image_upload__1464975319_1464975319.jpg"
-                alt=""
-                class="h-full w-full object-cover"
-              />
-              <div
-                class="absolute inset-0 gradient-bg-header flex flex-col justify-end items-start"
-              >
-                <div class="pl-[8%] pb-[5%]">
-                  <p
-                    class="lg:text-7xl font-bold md:text-3xl text-md text-white w-full"
-                  >
-                    ABOUT US
-                  </p>
-                  <button
-                    class="md:py-3 md:px-5 py-2 px-3 text-white bg-[#303f9f] rounded-md hover:bg-white hover:text-[#303f9f] border-2 border-[#303f9f] transition-ease-in-out mt-5"
-                  >
-                    Contact Us
-                  </button>
-                </div>
-              </div>
+      <section class="about-header">
+        <nav
+          class="flex justify-between items-center lg:h-20 w-11/12 mx-auto"
+          x-data="{open: false}"
+        >
+          <a href="#" class="bg-white pb-1 rounded-md">
+            <img
+              class="w-auto lg:h-16 h-12 object-contain"
+              src="../../public/assets/logo3.png"
+              alt="Logo"
+            />
+          </a>
+          <button
+            class="text-3xl text-orange-500 lg:invisible visible"
+            x-on:click="open = !open"
+          >
+            <span x-bind:class="open ? 'hidden' : 'block'"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+
+            <span x-bind:class="!open ? 'hidden' : 'block'"
+              ><i class="fa-solid fa-xmark"></i
+            ></span>
+          </button>
+          <ul
+            x-bind:class="open ? 'left-0' : '-left-full'"
+            class="flex lg:flex-row flex-col lg:justify-between justify-start items-center gap-5 font-bold lg:static absolute top-16 -left-full w-full lg:w-fit lg:bg-transparent gradient-bg-sm h-screen lg:h-fit pt-10 lg:pt-0 text-white lg:text-[#fff] transition-ease-in-out z-[9999]"
+          >
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Home</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">About Us</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Customers</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Suppliers</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Products</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Contact Us</a>
             </li>
           </ul>
+        </nav>
+
+        <div class="w-11/12 mx-auto">
+          <div class="flex justify-center items-center h-[80vh] flex-col gap-5">
+            <h1
+              class="lg:text-5xl w-full text-3xl font-bold text-white text-left"
+            >
+              <span
+                class="bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
+                style="-webkit-text-fill-color: transparent"
+                >About Us</span
+              >
+            </h1>
+
+            <a
+              href="#"
+              class="px-10 py-3 bg-gradient-to-r from-orange-600 text-white to-yellow-500 mr-auto rounded-sm font-semibold"
+              >Learn more</a
+            >
+          </div>
         </div>
       </section>
       <!--Carousel Ends-->
 
       <section class="lg:pt-16 py-6 overflow-hidden">
         <h2
-          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold text-[#303F9F]"
+          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold text-[#303F9F] bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
+          style="-webkit-text-fill-color: transparent"
         >
           ABOUT
         </h2>
@@ -119,7 +112,10 @@
           <div class="grid grid-cols-1 md:grid-cols-2">
             <!-- Text Column -->
             <div class="bg-white rounded-lg p-6" data-aos="fade-right">
-              <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+              <h2
+                class="text-2xl font-semibold text-gray-800 mb-4 bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
+                style="-webkit-text-fill-color: transparent"
+              >
                 ABOUT MEDI-CHEM INTERNATIONAL
               </h2>
               <p class="text-gray-600">
@@ -170,7 +166,10 @@
             </div>
             <!-- Text Column -->
             <div class="bg-white rounded-lg p-6" data-aos="fade-left">
-              <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+              <h2
+                class="text-2xl font-semibold text-gray-800 mb-4 bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
+                style="-webkit-text-fill-color: transparent"
+              >
                 Our Specialization
               </h2>
               <p class="text-gray-600">
@@ -206,14 +205,15 @@
 
       <section class="lg:pt-16 py-6 text-center">
         <h2
-          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold text-[#303F9F]"
+          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold text-[#303F9F] bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
+          style="-webkit-text-fill-color: transparent"
         >
           COMPANY MANAGEMENT
         </h2>
         <div class="flex justify-center items-center mb-8">
           <img
-            class="border-2 border-[#303F9F] rounded-full w-52 h-52 md:w-80 md:h-80 object-contain"
-            src="../../public/assets/propiter.jpg"
+            class="border-2 border-orange-400 rounded-full w-52 h-52 md:w-80 md:h-80 object-cover object-top"
+            src="../../public/assets/management.jpg"
             alt=""
           />
         </div>
@@ -241,7 +241,8 @@
 
       <section class="lg:py-16 py-5 px-4">
         <h2
-          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold text-[#303F9F]"
+          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
+          style="-webkit-text-fill-color: transparent"
         >
           BUSINESS MANAGEMENT
         </h2>
@@ -258,7 +259,7 @@
             <div x-data="{ open: false }">
               <button
                 @click="open = !open"
-                class="bg-[#303F9F] w-full text-left text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-between items-center"
+                class="bg-gradient-to-r from-orange-600 to-yellow-500 w-full text-left text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-between items-center"
               >
                 Technical<i class="fa-solid fa-angle-down"></i>
               </button>
@@ -309,7 +310,7 @@
             <div x-data="{ open: false }">
               <button
                 @click="open = !open"
-                class="bg-[#303F9F] text-left w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-between items-center"
+                class="bg-gradient-to-r from-orange-600 to-yellow-500 text-left w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-between items-center"
               >
                 Sales & Marketing<i class="fa-solid fa-angle-down"></i>
               </button>

@@ -36,13 +36,13 @@
         >
           <a href="#" class="bg-white pb-1 rounded-md">
             <img
-              class="w-auto h-16 object-contain"
+              class="w-auto lg:h-16 h-12 object-contain"
               src="../../public/assets/logo3.png"
               alt="Logo"
             />
           </a>
           <button
-            class="text-2xl lg:invisible visible"
+            class="text-3xl text-orange-500 lg:invisible visible"
             x-on:click="open = !open"
           >
             <span x-bind:class="open ? 'hidden' : 'block'"
@@ -82,7 +82,7 @@
           <div
             class="flex justify-center items-center h-[80vh] flex-col lg:w-1/2 gap-5"
           >
-            <h1 class="text-5xl font-bold text-white">
+            <h1 class="lg:text-5xl text-3xl font-bold text-white">
               Welcome to
               <span
                 class="bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
@@ -117,10 +117,12 @@
         >
           WHAT WE DEAL FOR
         </h2>
-        <div class="w-11/12 mx-auto grid grid-cols-2 gap-5">
+        <div
+          class="w-11/12 mx-auto lg:grid flex flex-col-reverse lg:grid-cols-2 grid-cols-1 gap-5"
+        >
           <div class="">
             <div
-              class="mt-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-3 mx-auto"
+              class="mt-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-2 gap-3 mx-auto"
             >
               <div
                 class="text-left flex flex-col justify-start items-start space-y-3 shadow-lg rounded-md py-5 px-5 text-gray-800"
@@ -236,7 +238,9 @@
 
         <div id="splide" class="splide py-5">
           <div class="splide__track track">
-            <ul class="splide__list grid grid-cols-4 gap-5">
+            <ul
+              class="splide__list grid lg:grid-cols-4 grid-cols-1 lg:gap-5 gap-2.5"
+            >
               <li class="splide__slide">
                 <div
                   class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md shadow-orange-500/40"
@@ -459,7 +463,7 @@
           OUR CUSTOMERS
         </h2>
 
-        <div class="lg:py-20 py-5 w-11/12 mx-auto">
+        <div class="py-5 w-11/12 mx-auto">
           <section
             id="splide-client"
             class="splide"
@@ -633,6 +637,10 @@
               perPage: 1,
               padding: "30%",
             },
+            600: {
+              perPage: 1,
+              padding: "0",
+            },
           },
         }).mount();
       });
@@ -649,6 +657,7 @@
 
           600: {
             perPage: 1,
+            padding: "0%",
           },
         },
       }).mount();
