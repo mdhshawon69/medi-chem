@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medi-Chem</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.0/cdn.js"
+      integrity="sha512-kABigH+locGcvvX9sgOGm0JP4iDKUQzti7/HfbX+3ECCP2pmb13F6/ImQtVpSvrnNQHewqNMojAykCIw7z04LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/grid.css" />
+  </head>
+  <body>
+    <section class="max-w-[1920px]">
+      <!--NavBar-->
+      <section class="products-header">
+        <nav
+          class="flex justify-between items-center lg:h-20 w-11/12 mx-auto"
+          x-data="{open: false}"
+        >
+          <a href="#" class="bg-white pb-1 rounded-md">
+            <img
+              class="w-auto lg:h-16 h-12 object-contain"
+              src="../../public/assets/logo3.png"
+              alt="Logo"
+            />
+          </a>
+          <button
+            class="text-3xl text-orange-500 lg:invisible visible"
+            x-on:click="open = !open"
+          >
+            <span x-bind:class="open ? 'hidden' : 'block'"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+
+            <span x-bind:class="!open ? 'hidden' : 'block'"
+              ><i class="fa-solid fa-xmark"></i
+            ></span>
+          </button>
+          <ul
+            x-bind:class="open ? 'left-0' : '-left-full'"
+            class="flex lg:flex-row flex-col lg:justify-between justify-start items-center gap-5 font-bold lg:static absolute top-16 -left-full w-full lg:w-fit lg:bg-transparent gradient-bg-sm h-screen lg:h-fit pt-10 lg:pt-0 text-white lg:text-[#fff] transition-ease-in-out z-[9999]"
+          >
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Home</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">About Us</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Customers</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Suppliers</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Products</a>
+            </li>
+            <li class="hover:text-[#303f9f] transition-all">
+              <a class="active:text-[#303f9f]" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="w-11/12 mx-auto">
+          <div class="flex justify-center items-center h-[80vh] flex-col gap-5">
+            <h1
+              class="lg:text-5xl w-full text-3xl font-bold text-white text-left"
+            >
+              Symbol of
+              <span
+                class="bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
+                style="-webkit-text-fill-color: transparent"
+                >Quality Products & Service</span
+              >
+            </h1>
+
+            <a
+              href="#"
+              class="px-10 py-3 bg-gradient-to-r from-orange-600 text-white to-yellow-500 mr-auto rounded-sm font-semibold"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="w-11/12 mx-auto"></section>
+
+      <section class="w-11/12 mx-auto py-10">
+        <h2
+          class="lg:text-4xl text-2xl text-center lg:py-10 py-8 font-bold bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text"
+          style="-webkit-text-fill-color: transparent"
+        >
+          OUR PRODUCTS
+        </h2>
+        <div class="grid lg:grid-cols-4 grid-cols-1 mb-5">
+          <div>
+            <label
+              for="countries"
+              class="mb-2 text-sm font-medium text-gray-900 dark:text-white lg:block hidden"
+              >Select an option</label
+            >
+            <select
+              id="countries"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option selected disabled>Choose an order</option>
+
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="G">G</option>
+              <option value="H">H</option>
+              <option value="I">I</option>
+              <option value="J">J</option>
+              <option value="K">K</option>
+              <option value="L">L</option>
+              <option value="M">M</option>
+              <option value="N">N</option>
+              <option value="O">O</option>
+              <option value="P">P</option>
+              <option value="Q">Q</option>
+              <option value="R">R</option>
+              <option value="S">S</option>
+              <option value="T">T</option>
+              <option value="U">U</option>
+              <option value="V">V</option>
+              <option value="W">W</option>
+              <option value="X">X</option>
+              <option value="Y">Y</option>
+              <option value="Z">Z</option>
+            </select>
+          </div>
+          <div class="lg:block hidden"></div>
+          <div class="lg:block hidden"></div>
+          <div>
+            <label
+              for="countries"
+              class="lg:block hidden mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >hello</label
+            >
+            <form class="flex items-center mt-2.5 lg:mt-0">
+              <label for="voice-search" class="sr-only">Search</label>
+              <div class="relative w-full">
+                <input
+                  type="text"
+                  id="voice-search"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search Products..."
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="inline-flex items-center py-2 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                <svg
+                  class="w-4 h-4 mr-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  /></svg
+                >Search
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table
+            class="w-full overflow-x-scroll text-sm text-left text-gray-500 dark:text-gray-400"
+          >
+            <thead
+              class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+            >
+              <tr>
+                <th scope="col" class="px-6 py-3">SL</th>
+                <th scope="col" class="px-6 py-3">Product name</th>
+                <th scope="col" class="px-6 py-3">Category</th>
+                <th scope="col" class="px-6 py-3">Supplier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b dark:bg-gray-300">
+                <th
+                  scope="row"
+                  class="pl-6 w-fit py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  1
+                </th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  Acyclovir USP
+                </th>
+
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+              </tr>
+              <tr class="border-b bg-gray-50 dark:bg-gray-200">
+                <th
+                  scope="row"
+                  class="pl-6 w-fit py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  2
+                </th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  Amodiaquine Hcl
+                </th>
+
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-300">
+                <th
+                  scope="row"
+                  class="pl-6 w-fit py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  3
+                </th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  Armodafinil HCL INN
+                </th>
+
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+              </tr>
+              <tr class="border-b bg-gray-50 dark:bg-gray-200">
+                <th
+                  scope="row"
+                  class="pl-6 w-fit py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  4
+                </th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  Arteether INN
+                </th>
+
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+              </tr>
+              <tr class="border-b bg-gray-50 dark:bg-gray-300">
+                <th
+                  scope="row"
+                  class="pl-6 w-fit py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  5
+                </th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  Artesunate INN
+                </th>
+
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+                <td class="px-6 py-4 text-gray-900">Unknown</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section
+        class="gradient-bg py-20 lg:rounded-tr-[250px] rounded-tr-[150px]"
+      >
+        <footer class="w-11/12 mx-auto">
+          <div
+            class="flex lg:flex-row flex-col md:items-start gap-5 justify-between"
+          >
+            <div
+              class="h-24 w-fit rounded-md lg:bg-transparent bg-white shadow-2xl lg:mb-0 mb-16"
+            >
+              <img
+                class="h-20 w-auto"
+                src="../../public/assets/footer.png"
+                alt=""
+              />
+              <div class="text-center">
+                <p class="text-white pt-10">
+                  Medi-Chem International &copy; 2023
+                </p>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-y-5">
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-location-dot"></i> Head Office:
+                </h4>
+                <p class="leading-7 text-sm lg:text-md">
+                  Raj Rodela, 2nd Floor, 244/1, Ahmed Nagar,<br />
+                  (Near Bashiruddin School & College), Mirpur-1,<br />
+                  Dhaka -1216, Bangladesh. Tel: +88-02-58051550.
+                </p>
+              </div>
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-globe"></i> Overseas Liasion Office:
+                </h4>
+                <p class="leading-7 text-sm lg:text-md">
+                  Jay Enterprises, E-14, Nisarg Heaven, Near Pizza Hut,<br />
+                  Mahavir Nagar, Kandivili (W), Mumbai 400 067, India. <br />
+                  Tel: +91-22-6528 4052, Cell: +91-9820317144, +91-9324185294
+                  <br />
+                  Email: info@sourcechempharm.com
+                </p>
+              </div>
+              <div class="text-white lg:space-y-3 space-y-1">
+                <h4 class="font-bold text-lg">
+                  <i class="fa-solid fa-envelope"></i>
+                  info@medi-cheminternational.com
+                </h4>
+              </div>
+              <div class="flex md:justify-start gap-5 md:items-center">
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-facebook"></i>
+                  </h4>
+                </a>
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </h4>
+                </a>
+                <a href="#">
+                  <h4 class="font-bold text-2xl text-white">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </section>
+  </body>
+</html>
